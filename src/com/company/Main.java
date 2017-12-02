@@ -11,6 +11,7 @@ public class Main {
 
         ArrayList<Integer> sumAllElements = new ArrayList<Integer>();
 
+        //sum for Rows
         for (int row = 0; row <my_array.length; row++){
             int sumRow = 0;
             for(int col =0;col<my_array.length;col++){
@@ -22,7 +23,7 @@ public class Main {
             System.out.println("Sums of rows are " + sumAllElements);
         }
 
-
+        //sum for Columns
         for (int col = 0; col <my_array.length; col++){
             int sumCol = 0;
             for(int row =0;row<my_array.length;row++){
@@ -33,6 +34,19 @@ public class Main {
             System.out.println();
             System.out.println("Sums of rows and columns are " + sumAllElements);
         }
+
+        //sum for the first Diagonal
+        int col = 0;
+        int sumDiag = 0;
+        for (int row = 0; row < my_array.length; row++) {
+            System.out.print(my_array[row][col]);
+            sumDiag += my_array[row][col];
+            col++;
+
+        }
+        sumAllElements.add(sumDiag);
+        System.out.println("Sums of rows are " + sumAllElements);
+
     }
 
 
