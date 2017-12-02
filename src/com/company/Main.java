@@ -45,7 +45,19 @@ public class Main {
 
         }
         sumAllElements.add(sumDiag);
-        System.out.println("Sums of rows are " + sumAllElements);
+        System.out.println("Sums of rows, columns and the first diagonal are " + sumAllElements);
+
+        //sum for the 2nd Diagonal
+        int col2 = my_array.length - 1;
+        int sumDiag2 = 0;
+        for (int row = 0; row < my_array.length; row++) {
+            System.out.print(my_array[row][col2]);
+            sumDiag2 += my_array[row][col2];
+            col2--;
+
+        }
+        sumAllElements.add(sumDiag2);
+        System.out.println("Sums of rows, columns,first diagonal and the 2nd diagonal are " + sumAllElements);
 
     }
 
