@@ -25,7 +25,7 @@ public class MagicSquare {
 
  //   }
 
-    public void calculateSums(int[][]my_array){
+    public ArrayList calculateSums(int[][]my_array){
         ArrayList<Integer> sumAllElements = new ArrayList<Integer>();
 
         //sum for Rows
@@ -77,32 +77,32 @@ public class MagicSquare {
         sumAllElements.add(sumDiag2);
         System.out.println();
         System.out.println("Sums of rows, columns,first diagonal and the 2nd diagonal are " + sumAllElements);
-
+        return sumAllElements;
     }
 
-//    public void isMagicSquare(ArrayList sumAllElements){
-//        System.out.println("size "+sumAllElements.size());
-//        boolean isMagicSquare = true;
-//        int firstElem=0;
-//        for (int arrayElem = 0; arrayElem < sumAllElements.size()-1; arrayElem++) {
-//            if (sumAllElements.get(firstElem) == sumAllElements.get(arrayElem + 1)) {
-//                System.out.println("Element " + sumAllElements.get(firstElem) + " is equal to element " + sumAllElements.get(arrayElem + 1));
-//
-//            } else {
-//                System.out.println("Element " + sumAllElements.get(firstElem) + " is not equal to element " + sumAllElements.get(arrayElem + 1));
-//                isMagicSquare = false;
-//                break;
-//            }
-//
-//        }
-//
-//
-//        if(isMagicSquare ==true){
-//            System.out.println("This is a magic square");
-//        }else{
-//            System.out.println("This is not a magic square");
-//        }
-//    }
+    public void isMagicSquare(ArrayList sumAllElements){
+        System.out.println("size "+sumAllElements.size());
+        boolean isMagicSquare = true;
+        int firstElem=0;
+        for (int arrayElem = 0; arrayElem < sumAllElements.size()-1; arrayElem++) {
+            if (sumAllElements.get(firstElem) == sumAllElements.get(arrayElem + 1)) {
+                System.out.println("Element " + sumAllElements.get(firstElem) + " is equal to element " + sumAllElements.get(arrayElem + 1));
+
+            } else {
+                System.out.println("Element " + sumAllElements.get(firstElem) + " is not equal to element " + sumAllElements.get(arrayElem + 1));
+                isMagicSquare = false;
+                break;
+            }
+
+        }
+
+
+        if(isMagicSquare ==true){
+            System.out.println("This is a magic square");
+        }else{
+            System.out.println("This is not a magic square");
+        }
+    }
     }
 
 
