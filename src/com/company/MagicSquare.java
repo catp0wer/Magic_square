@@ -4,6 +4,7 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class MagicSquare {
@@ -25,7 +26,6 @@ public class MagicSquare {
                 row++;
             }
             br.close();
-            System.out.println(matrix.toString());
 
         } catch (Exception e) {
             System.out.println("Error while reading file line by line:" + e.getMessage());

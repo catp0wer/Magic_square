@@ -12,7 +12,6 @@ public class Main {
         String filePath = scanner.nextLine();
         System.out.println("Please enter the square length: ");
         int squareLength = scanner.nextInt();
-        //String filePath = "D:\\Git projects\\Magic_square\\Square.txt";
 
         if(filePath.isEmpty()){
             filePath=defaultPath;
