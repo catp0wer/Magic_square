@@ -1,25 +1,23 @@
 package com.company;
 
-import java.util.ArrayList;
+
+import java.util.Scanner;
 
 //write a program that will check if a two dimensional arrays is magical square or not
 public class Main {
     public static void main(String[] args) {
-        int[][] my_array = new int[][]{
-//                {1, 2, 3},
-//                {5, 6, 7},
-//                {6, 7, 8}
+        Scanner scanner = new Scanner(System.in);
+        String defaultPath = "D:\\Git projects\\Magic_square\\SquareGood.txt";
+        System.out.println("Please enter the path to the file or press enter for default: ");
+        String filePath = scanner.nextLine();
+        System.out.println("Please enter the square length: ");
+        int squareLength = scanner.nextInt();
+        //String filePath = "D:\\Git projects\\Magic_square\\Square.txt";
 
-                {2, 7, 6},
-                {9, 5, 1},
-                {4, 3, 8}
-        };
-
-        MagicSquare square = new MagicSquare();
-        ArrayList sumAllElements= square.calculateSums(my_array);
-        //System.out.println(sumAllElements);
-        square.isMagicSquare(sumAllElements);
-
+        if(filePath.isEmpty()){
+            filePath=defaultPath;
+        }
+        MagicSquare square = new MagicSquare(filePath,squareLength);
 
     }
 }
